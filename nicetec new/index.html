@@ -5,6 +5,8 @@
 		
 		</title>
 		<link href="css/style.css" rel="stylesheet">
+		<link href="css/mediaQuery.css" rel="stylesheet">
+		
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -18,7 +20,9 @@
 						<img src="img/logo.gif">
 					</div>
 					
-					<div class="nav">
+					<button id="toggle" onclick="menuToggle()" ><b>|||</b></button>
+					<div class="nav" id="nav">
+					  <button id="toggleclose" onclick="menuToggle()" ><b>X</b></button>
 						<ul>
 					 		<li>
 								<a href="">Home</a>
@@ -207,5 +211,18 @@
 			</footer>
 		  </div>
 		</main>
+		
+		<script>
+		  function menuToggle() {
+			  var x = document.getElementById("nav");
+			  if (x.style.display === "none") {
+				x.style.display = "block";
+				
+			  } else {
+				x.style.display = "none";
+			  }
+			}
+		</script>
+		
 	</body>
 </html>
